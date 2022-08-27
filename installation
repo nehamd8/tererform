@@ -1,0 +1,14 @@
+sudo su
+apt update –y && apt upgrade –y
+apt install unzip
+wget https://releases.hashicorp.com/terraform/1.2.4/terraform_1.2.4_linux_amd64.zip
+unzip terraform_1.2.4_linux_amd64.zip
+
+ls –l
+export PATH=$PATH:/home/ubuntu
+echo $PATH
+terraform -v
+
+terraform init
+terraform plan
+terraform apply
